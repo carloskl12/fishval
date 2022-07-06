@@ -1,0 +1,277 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+	font-family: sans-serif;
+}
+
+
+/* NAV BAR */
+
+h1{
+	font-size: 3rem;
+	/* background-color: #ECE5CE; */
+	margin: auto;
+	margin-bottom: 1rem;
+	/* margin-top: 2em; */
+}
+h2{
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+}
+h3{
+	font-size: 2rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+ul li, p{
+	font-size: 2rem;
+}
+nav ul li {
+	list-style: none;
+}
+.content>ul{
+	margin-left: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+.content>ul>li{
+	margin-bottom: 0.5rem;
+}
+p {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+a{
+	text-decoration: none;
+	color: rgb(83, 71, 71);
+}
+p a {
+	color:#2b38b1;
+	font-weight: bold;
+}
+.main-head{
+	position: fixed;/* para que esté la barra fija*/
+	width: 100%;
+	background: #e3edfa;
+	/* color:  rgb(118, 189, 173); */
+}
+
+nav{
+	min-height: 8vh;
+	display: flex;
+	width: 99%;
+	margin: auto;
+	padding: 0.2rem;
+	padding-left: 1em;
+	padding-right: 1em;
+	align-items: center;
+	/* align-items: baseline; */
+}
+
+nav ul{
+	display: flex;
+	flex: 1 1 15rem;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	/* background: rgb(107, 189, 121); */
+}
+
+#logo{
+    font-size: 2rem;
+	flex: 1 1 15rem;
+     /* background-color: rgb(189, 209, 159);  */
+}
+
+#userInput{
+	font-size: 2rem;
+	display:flex;
+	flex:4 1 50rem;
+	/*background: crimson;*/
+	padding: 5px;
+	align-items: center;
+	/*flex: 3 1 50rem;*/
+}
+.iconInfo{
+	/*flex: 1 2 20px;*/
+	width: auto;
+	transform: scale(-1, 1);
+	padding-left: 5px;
+	font-size: 3rem;
+	/*background: black;*/
+}
+.inputName{
+	flex:4 1 40rem;
+	margin-right: 10px;
+	/*background: chartreuse;*/
+	
+}
+.inputName input{
+	width: 100%;
+	font-size: 2rem;
+}
+.btIcon{
+	width: auto;
+	font-size: 2rem;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align:center;
+}
+.btIconRed{
+	width: auto;
+	font-size: 2rem;
+	padding-right: 10px;
+	padding-left: 5px;
+	text-align:center;
+	color: rgb(0, 0, 0);
+	letter-spacing:-5px;
+}
+
+.btIconRed sup{
+	font-size: 1.2rem;
+	color:darkred;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/*Formato del contenido*/
+.content{
+	padding: 4em 1em 1em 1em;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+	overflow:auto;
+	height: auto;
+	width: 800px;
+	justify-content: center;
+	/*background: rgb(252, 253, 246);*/
+}
+
+.tableButtons {
+	margin: auto;
+	background-color: #adcbe4;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* Ajustes para validaPeces*/
+table{
+	border: 1px solid #58647e;
+	border-collapse: collapse;
+}
+thead{
+	background-color: #afd9f1;
+  }
+
+td , th{
+    border: 1px solid #58647e;
+	padding: 15px 10px; 
+}
+
+#mainTb tbody td{
+	font-style: italic;
+}
+
+ #mainTb tbody td:first-letter {
+    text-transform: uppercase;
+} 
+/* Ajusta el nombre científico*/
+#fishName {
+	font-style: italic;
+}
+#fishName:first-letter {
+    text-transform: uppercase;
+}
+
+tr:nth-child(even){
+background-color:#ECE5CE;
+}
+/* tr:nth-child(odd){
+	background-color:#ffffff;
+} */
+.headContent{
+	margin:auto;
+	padding: 10px;
+	background: #adcbe4;
+}
+
+.fishTable{
+	padding: 10px;
+	margin:auto;
+	display: flex;
+	flex-direction: row;
+}
+/* tabla para los botones */
+.tb-buttons-check th,.tb-buttons-check td{
+	background-color: white;
+	border: none;
+}
+
+.tb-buttons-check th{
+	color: white;
+	font-size: 2.4rem;
+}
+.tb-buttons-check {
+	border: none;
+}
+
+.btcheckx {
+	color:red;
+}
+
+.btcheck {
+	color: green;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Autocompletado*/
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+  color: rgb(56, 56, 63);
+  font-style: italic;
+}
+.autocomplete-items div:first-letter {
+    text-transform: uppercase;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #09569e;
+  color:rgb(252, 246, 235);
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #09569e !important;
+  color: #fad400 !important;
+}
+
+footer, footer a {
+	text-align: center;
+	font-size: 2rem;
+}
