@@ -46,14 +46,33 @@
                 <img src="img/borradb.png">
             </button>
         </div>
-        <ul>
-            <li><a href="#acercade" onclick="showAbout()">Acerca de ...</a></li>
-        </ul>
+        <div class="tooltip">
+            <ul class="iconoHamb">
+                <li><a href="#acercade" onclick="showAbout()">Acerca</a></li>
+            </ul>
+            <span class="tooltiptext">
+                <ul> 
+                    <li> <img width="100px" src="img/logoValFish.png"></li>
+                    <li class="borderBottom"> ValFish Colombia </li>
+                    <li class="borderBottom"> Version 1.0 (01-08-2022)</li>
+                    <li class="borderNull"> García-Melo L. J., García-Melo J. E.,
+                         Jacanamejoy C. y Pareja-Carmona I. Validador de especies de
+                          peces continentales de Colombia V 1.0. 2022.</li>
+                </ul>
+            
+            </span>
+        </div>
+
     </nav>
 </header>
 
 <div class="content">
-    <h1 id="mainTitle">Validador de peces</h1>
+    <div class="logoValFish">
+        <img width="300px" src="img/logoValFish.png">
+    </div>
+    <h1 id="mainTitle">ValFish Colombia</h1>
+    <div class="centerText">García-Melo L. J., García-Melo J. E., Jacanamejoy C. y 
+        Pareja-Carmona I. Validador de especies de peces continentales de Colombia V 1.0. 2022.</div>
     <h2 id="tablaResultados">Tabla de resultados</h2>
     <div class="tableButtons">
         <button title="Abrir archivo csv" class="btIcon" NAME="open" ONCLICK='btfunImportCsv()'>
@@ -121,10 +140,10 @@
     </script>
     </div>
     
-
+    <h2>Ayuda</h2>
     <h3>Datos en formato csv</h3>
     <p>Un archivo en <a href="https://es.wikipedia.org/wiki/Valores_separados_por_comas" target="_blank" rel="noopener noreferrer">formato csv</a> corresponde a un documento en el que se almacenan datos en forma de 
-        tabla. Cada fila se representa con una linea de texto, y cada columna se separa con una coma.
+        tabla. Cada fila se representa con una línea de texto, y cada columna se separa con una coma.
     </p>
     <p>Las hojas de cálculo más utilizadas, por lo general, permiten guardar las tablas en formato csv.
         Es importante tener en cuenta que <b>el separador utilizado debe ser la coma</b>, puesto que hay casos en 
@@ -136,24 +155,31 @@
         puede ser un número, pero a fines prácticos puede ser una serie de caracteres alfanuméricos. 
     </p>
     <h2>Modo de uso</h2>
-    <p> Esta página permite validar los nombres de peces, y se presentan dos formas:
+    <p> Esta página permite validar los nombres científicos de especies de peces 
+        continentales de Colombia 
+        <!-- e incluir información asociada a la taxonomía,  -->
+        <!-- distribución, categoría de amenza, uso, etc -->
+        , basada en el CheckList de 
+        peces de agua dulce de Colombia más reciente de Donascimiento y colaboradores.
+        La información se puede ingresar, y se presentan dos formas:
     </p>
     <ul>
         <li> <b>Ingresando nombres uno a uno</b>. Utilizando la barra de navegación, se pueden
-            ingresar los nombres digitando los primeros carácteres y haciendo uso de la función 
+            ingresar los nombres digitando los primeros caracteres y haciendo uso de la función 
             de autocompletar que se despliega una vez encontrada alguna coincidencia.
         </li>
         <li> <b> Importando una lista</b>. Para importar una lista de nombres, esta lista debe estar 
-            en un archivo en formato csv y tener dos columnas, la primera con el número del nombre,
-            y la segunda con el nombre a validar.
+            en un archivo en formato csv y tener dos columnas: la primera requiere
+            un número consecutivo,
+            y la segunda un nombre científico a validar.
         </li>
     </ul>
     <h2>Barra de navegación</h2>
     
     <p>La barra de navegación consta de diferentes elementos, entrada de texto y botones, si se 
     ubica el cursor sobre ellos y se mantiene sin mover durante un tiempo aproximado de un segundo
-    se mostrará un mensaje de ayuda (tooltip) que puede dar una mejor idea de la función que 
-    cumple. A continuación el detalle de estos diferentes elementos:</p>
+    se mostrará un mensaje de ayuda (tooltip) que puede dar una mejor idea de la función.
+     A continuación el detalle de estos diferentes elementos:</p>
     <ul>
         <li><b>Ingreso del nombre</b>. Elemento que permite la digitación de un nombre, una vez se ingrese 
             la primera letra o carácter se activará la función de autocompletado, siempre que hayan 
@@ -178,15 +204,21 @@
 
     </p>
 
-    <h2 id="acercade">Acerca de</h2>
-    <p>Este validador de nombres científicos de peces surge como una implementacion inspirada 
-        en la iniciativa de Luis José García Melo con el fin de facilitar 
-        su uso y accesibilidad. En su desarrollo participan Luis José García Melo y Jorge Enrique García Melo como 
+    <h2 id="acercade">Acerca de ValFish Colombia</h2>
+    <p>Este Validador de especies de peces continentales de Colombia 
+        surge como una implementación inspirada 
+        en la iniciativa de Luis José García Melo, cuya finalidad es facilitar 
+        el manejo bases de datos de especies para generar de manera organizada 
+        reportes o listados corregidos con información taxonómica actualizada basada 
+        en el CheckList de Donascimiento et al. (2022).
+         En su desarrollo participan Luis José García Melo,
+          María Isabel Pareja Carmona y Jorge Enrique García Melo como 
         revisores del contenido y diseño de la interfaz de usuario, y Carlos Antonio Jacanamejoy Jamioy 
         como desarrollador web.
     </p>
-    <p>El validador se enmarca dentro del macroproyecto <a href="https://cavfish.unibague.edu.co/">CaVFish</a>
-    como una herramienta complementaria para la comunidad científica que estudia los peces.</p>
+    <p>El validador se enmarca dentro del Proyecto <a href="https://cavfish.unibague.edu.co/">CaVFish - Colombia</a>
+    como una herramienta complementaria para los usuarios que tienen interés en generar listados 
+    taxonómicos de epsecies de peces continentales de Colombia.</p>
 </div>
 
 <footer >

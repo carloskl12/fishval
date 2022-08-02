@@ -163,6 +163,12 @@ nav ul{
 	/*background: rgb(252, 253, 246);*/
 }
 
+.logoValFish{
+	margin:auto;
+}
+.centerText{
+	text-align: center;
+}
 .tableButtons {
 	margin: auto;
 	background-color: #adcbe4;
@@ -285,4 +291,65 @@ background-color:#ECE5CE;
 footer, footer a {
 	text-align: center;
 	font-size: 2rem;
+}
+
+/* Menu acerca de como tooltip */
+.tooltip {
+    position: relative;
+    /* display: inline-block; */
+	display: flex;
+	flex: 1 1 15rem;
+	justify-content: space-around;
+    /* font-weight: bold; */
+  /*  border-bottom: 1px dotted black;*/
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 260px;
+    height: 300px;
+    background-color: #afd9f1;
+    color: rgb(6, 14, 56);
+    text-align: center;
+    /* font-weight: normal; */
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: -100px;/*ancho-110*/
+    top: 4rem;
+    /* margin-left: -60px; */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: none;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+ 
+  
+.tooltiptext ul{
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+	/* flex: 1 0 1rem; */
+	align-items: center;
+	list-style: none;
+
+	/* background: rgb(107, 189, 121); */
+	font-size:26;
+	
 }
