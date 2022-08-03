@@ -123,7 +123,13 @@
         const sep = ',';
         (async () => {
             const datos = await readCsv(file,sep);
-            if(datos.length>0 && (datos[0].length == 2||datos[0].length == 3 )){
+            if(datos.length>0 && datos[0].length == 2){
+                datos[0].push("Recomendación");
+                for(let i=1;i<datos.length;i++){
+                    datos[i].push("");
+                }
+            }
+            if(datos.length>0 && (datos[0].length == 3 )){
                 if(datos.length< 12){
                     console.log('datos:', datos);
                 }
